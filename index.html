@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodologías BEM y camelCase</title>
+  <link rel="stylesheet" href="/estilos/estilos.css">
+</head>
+<body>
+  <main id="contenedorGeneral">
+    <header class="encabezadoPagina"> 
+        <section classseccion">
+           <h1><b>INVESTIGACIÓN Y APLICACIÓN DE METODOLOGÍAS BEM Y CAMELCASE</b></h1>
+        </section> 
+    </header>
+    <section class="cuerpoPagina">
+           <h2>¿Qué es BEM?</h2>
+           <p>BEM (Block Element Modifier) es una metodología de nomenclatura para clases en HTML y CSS que tiene como objetivo escribir código más claro, estructurado, mantenible y escalable en proyectos web.</p>
+        <section class="contenedorImagenbem">
+           <img src="Bem.jpg" alt="">
+        </section>
+      </section>
+      <section class="seccion">
+            <h2>Ventajas de usar BEM</h2>
+          <ol>
+            <li>Claridad y legibilidad</li>
+            <li>Estructura modular</li>
+            <li>Evita conflictos en el CSS</li>
+            <li>Escalabilidad</li>
+            <li>Mejor colaboración en equipos</li>
+            <li>Facilita pruebas automatizadas y QA</li>
+          </ol>
+      </section>
+      <section class="seccion">
+                <h2>Ejemplos de código usando BEM</h2>
+            <ul>
+                    <li>Tarjeta de producto</li>
+                    <li>Mensaje de alerta</li>
+                    <li>Formulario con campos de error</li>
+                    <li>Menú de navegación con ítem activo</li>
+                <nav class="nav">
+                  <ul class="nav__list">
+                   <li class="nav__item">
+                      <a href="#" class="nav__link nav__link--active">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                     <a href="#" class="nav__link">Servicios</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link">Portafolio</a>
+                    </li>
+                    <li class="nav__item">
+                     <a href="#" class="nav__link">Contacto</a>
+                    </li>
+                  </ul>
+                </nav>
+                <li>Grupo con dos campos lado a lado (ej. nombre y apellido)</li>
+                <li>Lista de tareas</li>
+                <li>Encabezado de sitio con navegación</li>
+              <li>Botón con modificadores</li>
+                <button class="btn btn--primary">Enviar</button>
+                <button class="btn btn--secondary">Cancelar</button>
+            </ul>
+      </section>
+      <section class="seccion">
+            <h2>¿Qué es camelCase?</h2>
+            <p>camelCase es una convención de escritura muy usada en programación para nombrar variables, funciones y más. Se caracteriza por iniciar la primera palabra en minúscula y luego cada palabra siguiente en mayúscula, sin espacios ni guiones. Su nombre viene de la forma "jorobada" que adquiere el texto debido a las mayúsculas intercaladas.</p>
+      <section class="contenedorImagenbem">
+           <img src="camelcase.png" alt=""> 
+      </section>
+      </section>
+      <section class="seccion">
+            <h2>Situaciones donde se usa camelCase</h2>
+            <ol>
+                <li>Nombres de variables en muchos lenguajes de programación</li>
+                <li>Nombres de funciones o métodos</li>
+                <li>Propiedades de objetos en JavaScript/JSON</li>
+                <li>Nombres de parámetros en funciones</li>
+                <li>En frameworks y librerías</li>
+                <li>Nombres de campos en bases de datos (en algunos estilos de ORM)</li>
+             </ol>
+      </section>
+      <section class="seccion">
+              <h2>Ejemplos de código usando camelCase</h2>
+                  <ul>
+                   <li><code>dejar nombre de usuario = "Carlos";</code> → variable en camelCase</li>
+                    <li><code>lista de productos constante = ["pan", "leche", "huevos"];</code> → arreglo con nombre en camelCase</li>
+                    <li><code>usuario constante = { primer nombre: "Xiomara", apellido: "Sifuentes" };</code> → objeto con propiedades en camelCase</li>
+                    <li><code>funcion showAlertMessage() { alerta("¡Hola!"); }</code> → función que muestra un mensaje</li>
+                    <li><code>const totalPrice = calculaTotal(5);</code> → uso de variable y función en camelCase</li>
+                    <li><code>class ShoppingCart { addItem(product) { ... } }</code> → método de clase en camelCase</li>
+                    <li><code>const isAvailable = true;</code> → booleano en camelCase</li>
+                    <li><code>document.querySelector(".mainContainer");</code> → clase CSS con camelCase (válido pero no recomendado)</li>
+                  </ul>
+      </section>
+      <section class="seccion"> 
+            <h2>Tabla comparativa: BEM vs camelCase</h2>
+            <table border="1">
+              <thead>
+               <tr>
+                 <th><b>CARACTERÍSTICAS</b></th>
+                 <th><b>BEM</th>
+                  <th><b>CAMELCASE</b></th>
+                </tr>
+            <tr>
+           <th><b>Uso principal</b></th>
+            <th>Nombres de clases CSS</th>
+           <th>Nombres de variables, funciones y propiedades</th>
+         </tr>
+           <tr>
+              <th><b><b>Formato</b></b></th>
+              <th>Bloque__elemento--modificador</th>
+              <th>NombresDeClase</th>
+          </tr>
+                <tr>
+                  <th><b><b>separadores</b></b></th>
+                  <th>Doble guion bajo(__) y doble guion (--)</th>
+                  <th>NO hay separadores; solo mayúsculas intermedias</th>
+               </tr>
+                  <tr>
+                      <th><b><b>Legibilidad</b></b></th>
+                      <th>Alta (estructura explícita)</th>
+                      <th>Media (más compacta)</th>
+                  </tr>
+                        <tr>
+                       <th><b>Escalabilidad</b></th>
+                       <th>Muy buena para proyectos grandes</th>
+                       <th>Menor,puede volvorse confuso</th>
+               <tr>
+                 <th><b>Aprendizaje</b></th>
+                 <th>Requiere aprender la convencion</th>
+                 <th>Intuitiva para quienes conocen JS</th>
+               </tr>
+                    <tr>
+                        <th><b>Contexto de uso común</b></th>
+                        <th>CSS, especialmente en grandes proyectos.	</th>
+                        <th>JavaScrip,variables,clases JS.</th>
+                    </tr>
+              <tr>
+                    <th><b>Ventajas</b></th>
+                    <th>Ventajas	Claridad estructural en el CSS, fácil de escalar.</th>
+                    <th>Corto, legible, escritura rápida. </th>
+              </tr>
+
+            <tr>
+                <th><b>Desventajas.</b></th>
+                <th>Nombres largos, más verbosidad.</th>
+                <th>Puede generar conflictos si se usa mal.</th>
+            </tr>
+               <tr>
+                  <th><b>Ideal para.</b></th>
+                  <th>Ideal para	Interfaces complejas y mantenimiento de estilos.</th>
+                  <th>Lógica de programación y manipulación de datos</th>
+               </tr>   
+               <tr>
+                  <th><b>Ejemplo</b></th>
+                  <th>card__title--highlighted.</th>
+                  <th>cardTitleHighlighted</th>
+               </tr>
+                               
+          </thead> 
+        </table>
+      </section> 
+    <section class="seccion">
+      <h2><b>Sección de aplicación práctica:</b></h2>
+      <h4>Tarjeta de usuario (User Card)</h4>
+       <div class="profile-card profile-card--highlighted">
+         <img class="profile-card__janeth" src="12.jpg" alt="janeth">
+        <h2 class="profile-card__name">JP Flores</h2>
+         <p class="profile-card__description"><h5>Estudiante de Desarrollo de Sistemas</h5></p>
+      </div>
+   
+    </section>
+    
+      <footer class="site-footer">
+  <p class="site-footer__text">Creado por [Janeth Pascacio] | Página web educativo de Bem y CamelCase</p>
+</footer>
+      </main>
+    
+</body>
+</html>
+
+  
